@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>DinoProject</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <header>
+        <!--zone de connection-->
+        <table>
+            <td>
+                <tr><input type="text"></tr>
+                <tr><input type="password"></tr>
+                <button>login</button>
+            </td>
+        </table>
+    </header>
+    <main>
+        <!--zone de jeux-->
+        <div>
+            <div id="scoreAffichage"></div>
+            <button id="score" onclick="score()">Start</button>
+            <button id="stop" onclick="stop()">Stop</button>
+        </div>
+        <div id="Dino"></div>
+        <div id="enemy" style="background-color: black; width: 50px; height: 50px;"></div>
+        <div>
+            <button id="red" class="colorDino" onclick="red()">red</button>
+            <button id="green" class="colorDino" onclick="green()">green</button>
+            <button id="blue" class="colorDino" onclick="blue()">blue</button>
+            <button id="gray" class="colorDino" onclick="gray()">gray</button>
+        </div>
+        <!--zone du carousel-->
+    </main>
+    <footer>
+        <!--zone de classement-->
+        <div id="classement">
+
+        </div>
+    </footer>
+</body>
+
+<script>
+
+</script>
+
+</html>
