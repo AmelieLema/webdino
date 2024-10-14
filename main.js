@@ -59,7 +59,7 @@ function green() {
     console.log("green");
 
     gtag('event', 'green', {
-        'button_color': couleurRouge,
+        'button_color': couleurVert,
         'page_location': window.location.href
     });
 }
@@ -74,7 +74,7 @@ function blue() {
     console.log("blue");
 
     gtag('event', 'blue', {
-        'button_color': couleurRouge,
+        'button_color': couleurBleu,
         'page_location': window.location.href
     });
 }
@@ -89,7 +89,7 @@ function gray() {
     console.log("gray");
 
     gtag('event', 'gray', {
-        'button_color': couleurRouge,
+        'button_color': couleurGray,
         'page_location': window.location.href
     });
 }
