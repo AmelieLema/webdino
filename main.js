@@ -42,6 +42,11 @@ function red() {
     const couleurRouge = "red";
     Dino.style.backgroundColor = couleurRouge;
     console.log("red");
+
+    gtag('event', 'clic_bouton', {
+        'button_color': couleurRouge,
+        'page_location': window.location.href
+    });
 }
 
 //Pour le bouton vert
