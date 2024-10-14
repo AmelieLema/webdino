@@ -57,6 +57,11 @@ function green() {
     const couleurVert = "green";
     Dino.style.backgroundColor = couleurVert;
     console.log("green");
+
+    gtag('event', 'green', {
+        'button_color': couleurRouge,
+        'page_location': window.location.href
+    });
 }
 
 //Pour le bouton bleu
@@ -67,6 +72,11 @@ function blue() {
     const couleurBleu = "blue";
     Dino.style.backgroundColor = couleurBleu;
     console.log("blue");
+
+    gtag('event', 'blue', {
+        'button_color': couleurRouge,
+        'page_location': window.location.href
+    });
 }
 
 //Pour le bouton gray
@@ -77,6 +87,11 @@ function gray() {
     const couleurGray = "gray";
     Dino.style.backgroundColor = couleurGray;
     console.log("gray");
+
+    gtag('event', 'gray', {
+        'button_color': couleurRouge,
+        'page_location': window.location.href
+    });
 }
 
 //le saut
