@@ -58,6 +58,38 @@
         'app_name': 'myAppName',
         'screen_name': 'Home'
       });
+
+  // Définir la zone en haut à droite (par exemple, 20% en largeur et 15% en hauteur)
+  const rightThreshold = window.innerWidth * 0.8; // 80% de la largeur de l'écran
+  const topThreshold = window.innerHeight * 0.15; // 15% de la hauteur de l'écran
+
+  // Variable pour éviter d'envoyer plusieurs fois l'événement
+  let mouseTracked = false;
+
+  // Fonction pour vérifier la position de la souris
+  function trackMousePosition(event) {
+    const mouseX = event.clientX; // Position en X de la souris
+    const mouseY = event.clientY; // Position en Y de la souris
+
+    // Si la souris est dans la zone définie et l'événement n'a pas encore été envoyé
+    if (mouseX >= rightThreshold && mouseY <= topThreshold && !mouseTracked) {
+      // Marque l'événement comme envoyé
+      mouseTracked = true;
+
+      // Envoie l'événement personnalisé à GA4
+      gtag('event', 'mouse_in_top_right', {
+        'mouse_position_x': mouseX,
+        'mouse_position_y': mouseY,
+        'page_location': window.location.href,
+        'page_title': document.title
+      });
+
+      console.log('Événement de souris envoyé à GA4 :', mouseX, mouseY);
+    }
+  }
+
+  // Ajouter un écouteur d'événements pour surveiller les mouvements de la souris
+  window.addEventListener('mousemove', trackMousePosition);
 </script>
 
 </html>
