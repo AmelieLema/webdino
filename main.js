@@ -43,7 +43,7 @@ function red() {
     Dino.style.backgroundColor = couleurRouge;
     console.log("red");
 
-    gtag('event', 'clic_bouton', {
+    gtag('event', 'red', {
         'button_color': couleurRouge,
         'page_location': window.location.href
     });
